@@ -7,7 +7,7 @@ close all;
 clear all;
 
 % Initializing:
-cFreq = 1000;
+cFreq = 250;
 cAmp  = 1;
 mI    = 0.8;
 
@@ -46,10 +46,10 @@ hold on;
 
 % Adding frequency analysis:
 figure;
-plotSigSpec(mSig,1/sI);
-%hold on;
-%plotSigSpec(cSig,1/sI);
-title('Frequency spectrum of Message signal');
+plotSigSpec(mSig,1/sI,'c');
 hold on;
+plotSigSpec(uSig,1/sI,'r');
+title('Frequency spectrum of message and modulated signal');
+legend('Message signal','Modulated signal');
 
 
